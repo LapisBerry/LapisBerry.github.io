@@ -1,59 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya Sans");
 
 body {
-    font-family: "Mitr", sans-serif;
+    background-color: #ee9322;
+    font-family: "Alegreya Sans";
 }
 
-section {
-    margin: 20px 0;
-}
-
-#under-development {
-    font-size: 2em;
+#title-lapisberry {
+    font-size: 72px;
     font-weight: bold;
     margin: 0;
     text-align: center;
 }
 
-#myimg {
-    width: 300px;
-    height:300px;
-    object-fit:cover;
-    border-radius:50%;
-}
-
-#clicky-button {
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.center {
+#profile_face_skr_503 {
     display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius:50%;
+    object-position: -85px 0px;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
 }
 
-.parent {
-    height: 200px;
-    background: gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#profile_lb_pinch_lapisberry {
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius:50%;
+    object-position: 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
 }
-  
-.child {
-    height: 100px;
-    width: 800px;
-    background: blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+#under-development {
+    font-size: 150px;
+    text-align: center;
+}
+
+#section-main {
+    font-size: 30px;
+    text-align: center;
 }
