@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: #ee9322;
+    font-family: "Sometype Mono";
+}
+
+a {
+    text-decoration: none;
+}
+
+.under-development-text {
+    font-size: 72px;
+    text-align: center;
+}
+
+.title-text {
+    font-size: 64px;
+    text-align: center;
+}
+
+.picture-main-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 270px;
+}
+
+.left-picture-container {
+    display: inline-block;
+    width: 50%;
+    height: 270px;
+    text-align: center;
+}
+
+.right-picture-container {
+    display: inline-block;
+    width: 50%;
+    height: 270px;
+    text-align: center;
+}
+
+.left-picture {
+    width: 200px;
+    margin-right: 25px;
+    border-radius: 100%;
+    float: right;
+    vertical-align: middle;
+    transition: 2s;
+}
+
+.left-picture:hover {
+    width: 250px;
+    transform: rotate(360deg);
+}
+
+.right-picture {
+    width: 200px;
+    height: 200px;
+    margin-left: 25px;
+    object-fit: cover;
+    object-position: -60px;
+    border-radius: 20%;
+    float: left;
+    vertical-align: middle;
+    transition: 2s;
+}
+
+.right-picture:hover {
+    width: 250px;
+    height: 250px;
+    object-position: -75px;
+    transform: rotate(360deg);
+}
+
+.paragraph-main-text {
+    text-align: center;
+    font-size: 22px;
+}
+
+.shield-container {
+    width: 800px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.shield-img {
+    vertical-align: center;
+    margin-bottom: 10px;
+    height: 30px;
+    transition: 1s;
+}
+
+.shield-img:hover {
+    height: 35px;
+}
