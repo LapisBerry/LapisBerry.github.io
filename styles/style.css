@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Flavors&family=Playpen+Sans:wght@400;700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&family=Sometype+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+/*
+monospace fonts:
+    Sometype Mono
+    Roboto Mono
+
+handwritten fonts:
+    Flavors
+    Playpen Sans
+    Calligraffitti
+*/
 
 body {
-    background-color: #ee9322;
-    font-family: "Sometype Mono";
+    font-family: "Sometype Mono", "Mitr";
 }
 
 a {
@@ -10,6 +19,7 @@ a {
 }
 
 .under-development-text {
+    font-family: "Flavors";
     font-size: 72px;
     text-align: center;
 }
@@ -74,6 +84,7 @@ a {
 }
 
 .paragraph-main-text {
+    font-family: "Playpen Sans";
     text-align: center;
     font-size: 22px;
 }
