@@ -16,6 +16,8 @@ Another purpose I created this repository is because I wanna learn how to create
 
 ![HTML5][html5-shield] ![CSS3][css3-shield] ![JavaScript][javascript-shield]
 
+<p>JavaScript thingies will be used in the future.😅</p>
+
 <h3 align="center">secret reason</h3>
 <p>
 I saw my friends's website💖, I envy them🤣, I wanna make my own and make it much more beautiful🪷 then all of them 🔥
