@@ -1,98 +1,521 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>LapisBerry</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/background.css">
-    <link rel="icon" type="image/x-icon" href="src/icon/favicon.ico">
-</head>
-<body>
-    <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
-        <defs>
-            <style>
-                @keyframes rotate {
-                        0% {
-                        transform: rotate(0deg);
-                    }
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-                .out-top {
-                    animation: rotate 20s linear infinite;
-                    transform-origin: 13px 25px;
-                }
-                .in-top {
-                    animation: rotate 10s linear infinite;
-                    transform-origin: 13px 25px;
-                }
-                .out-bottom {
-                    animation: rotate 25s linear infinite;
-                    transform-origin: 84px 93px;
-                }
-                .in-bottom {
-                    animation: rotate 15s linear infinite;
-                    transform-origin: 84px 93px;
-                }
-            </style>
-        </defs>
-        <path fill="#9b5de5" class="out-top" d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z"/>
-        <path fill="#f15bb5" class="in-top" d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z"/>
-        <path fill="#00bbf9" class="out-bottom" d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z"/>
-        <path fill="#00f5d4" class="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"/>
-    </svg>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kittiphop 'Ikkyu' Khankaew (LapisBerry) — Computer Engineering student at Chulalongkorn University. Portfolio, projects, and contact."
+    />
+    <meta name="author" content="Kittiphop Khankaew" />
+    <meta property="og:title" content="LapisBerry — Kittiphop Khankaew" />
+    <meta
+      property="og:description"
+      content="Computer Engineering student at Chulalongkorn University. Versatile builder of small, sharp things."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lapisberry.github.io" />
+    <title>LapisBerry — Kittiphop Khankaew</title>
+    <link rel="icon" type="image/x-icon" href="src/icon/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="glow glow-a" aria-hidden="true"></div>
+    <div class="glow glow-b" aria-hidden="true"></div>
 
-    <h1 class="under-development-text">UNDER DEVELOPMENT</h1>
-    <h2 class="title-text">LapisBerry</h2>
-    <div class="picture-main-container">
-        <div class="left-picture-container">
-            <img class="left-picture" src="src/image/Profile_LB_Pinch_Lapis.jpg">
-        </div><!--
-     --><div class="right-picture-container">
-            <img class="right-picture" src="src/image/Profile_Face_SKR_503.jpg">
+    <header class="nav" id="top">
+      <a class="nav-brand" href="#top">
+        <span class="brand-prompt">~/</span><span class="brand-name">LapisBerry</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about"><span class="nav-num">01</span> about</a>
+        <a href="#skills"><span class="nav-num">02</span> skills</a>
+        <a href="#projects"><span class="nav-num">03</span> projects</a>
+        <a href="#education"><span class="nav-num">04</span> education</a>
+        <a href="#contact"><span class="nav-num">05</span> contact</a>
+      </nav>
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="eyebrow">
+              <span class="dot dot-online"></span> available for collaboration
+            </p>
+            <h1 class="hero-title">
+              Hi, I'm <span class="accent">Ikkyu</span>.
+            </h1>
+            <p class="hero-sub">
+              Also known as
+              <span class="mono accent-soft">@LapisBerry</span> — a Computer
+              Engineering student at Chulalongkorn University who likes
+              building small, sharp things on the web, in the terminal, and
+              everywhere in between.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">
+                <span class="mono">$</span> view --projects
+              </a>
+              <a class="btn btn-ghost" href="#contact">
+                <span class="mono">$</span> say --hi
+              </a>
+            </div>
+          </div>
+
+          <aside class="terminal" aria-label="Terminal preview">
+            <div class="terminal-bar">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+              <span class="terminal-title">ikkyu@chula: ~/portfolio</span>
+            </div>
+            <pre class="terminal-body" id="terminal"><span class="t-line"><span class="t-prompt">$</span> whoami</span>
+<span class="t-line t-out">Kittiphop "Ikkyu" Khankaew</span>
+<span class="t-line"><span class="t-prompt">$</span> cat ./about.txt</span>
+<span class="t-line t-out">CPE Student · CEDT01 · Bangkok, TH</span>
+<span class="t-line t-out">"I'm kinda versatile 🔥"</span>
+<span class="t-line"><span class="t-prompt">$</span> ls ./stack/</span>
+<span class="t-line t-out">python  javascript  typescript  c  cpp  java</span>
+<span class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></span></pre>
+          </aside>
         </div>
-    </div>
-    
-    <p class="paragraph-main-text" style="margin-top: 0px;">Hi!, My name is Ikkyu.</p>
-    <p class="paragraph-main-text">You might know me as LapisBerry, Nice to meet you!</p>
-    <p class="paragraph-main-text">I'm learning HTML and CSS for this website.</p>
-    <p class="paragraph-main-text">I'm constantly updating this page.</p>
+      </section>
 
-    <h2 class="title-text">Social Media</h2>
-    <div class="shield-container">
+      <section class="section" id="about">
+        <header class="section-head">
+          <span class="section-num">// 01</span>
+          <h2>about.md</h2>
+          <span class="section-rule"></span>
+        </header>
+        <div class="about-grid">
+          <div class="about-photo">
+            <img
+              src="src/image/Profile_Face_SKR_503.jpg"
+              alt="Photo of Kittiphop Khankaew"
+              loading="lazy"
+            />
+            <div class="photo-frame" aria-hidden="true"></div>
+          </div>
+          <div class="about-body">
+            <p>
+              I go by <strong>Ikkyu</strong> in person and
+              <strong class="accent">LapisBerry</strong> online. I'm a
+              Computer Engineering undergrad at Chulalongkorn University
+              (CEDT batch 01) — somewhere on the spectrum between a
+              software engineer who likes data and a hobbyist who likes to
+              ship.
+            </p>
+            <p>
+              I enjoy turning small ideas into running code: a spinning
+              ASCII donut, a pixel-art generator on Desmos, a web app for a
+              class project, or just one more LeetCode problem at midnight.
+            </p>
+            <ul class="about-meta">
+              <li>
+                <span class="mono key">location</span>
+                <span>Bangkok, Thailand</span>
+              </li>
+              <li>
+                <span class="mono key">studying</span>
+                <span>Computer Engineering · Chulalongkorn</span>
+              </li>
+              <li>
+                <span class="mono key">aliases</span>
+                <span>Ikkyu · LapisBerry · blueoflapislazuli</span>
+              </li>
+              <li>
+                <span class="mono key">interests</span>
+                <span>machine learning, AI, data science, math, algorithms, generative art, web</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <a target="_blank" href="mailto:kittiphopkhankaew@gmail.com"> <!--Email shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/Email-kittiphopkhankaew%40gmail.com-white?style=for-the-badge&logo=Gmail&logoColor=white&labelColor=%23EA4335">
-        </a>
-        <a target="_blank" href="https://github.com/LapisBerry"> <!--GitHub shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/GitHub-LapisBerry-white?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=black">
-        </a>
-        <a target="_blank" href="https://discordapp.com/users/1110214078808461393"> <!--Discord shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/Discord-blueoflapislazuli-white?style=for-the-badge&logo=Discord&logoColor=white&labelColor=%235865F2">
-        </a>
-        <a target="_blank" href="https://www.instagram.com/mighty_ikkyu/"> <!--Instagram shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/Instagram-mighty__ikkyu-white?style=for-the-badge&logo=Instagram&logoColor=white&labelColor=%23E4405F">
-        </a>
-        <a target="_blank" href="https://www.facebook.com/kittiphop.khankaew.9/"> <!--Facebook shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/Facebook-Kittiphop_Khankaew-white?style=for-the-badge&logo=Facebook&logoColor=white&labelColor=%231877F2">
-        </a>
-        <a target="_blank" href="https://twitter.com/LapiXLazuliX"> <!--X shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/X-LapixLazulix-white?style=for-the-badge&logo=X&logoColor=white&labelColor=black">
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/in/kittiphop-khankaew/    "> <!--LinkedIn shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/LinkedIn-Kittiphop_Khankaew-white?style=for-the-badge&logo=LinkedIn&logoColor=white&labelColor=%230A66C2">
-        </a>
-        <a target="_blank" href="https://www.kaggle.com/kittiphopkhankaew"> <!--Kaggle shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/Kaggle-Kittiphop_Khankaew-white?style=for-the-badge&logo=Kaggle&logoColor=white&labelColor=%2320BEFF">
-        </a>
-        <a target="_blank" href="https://leetcode.com/LapisBerry/"> <!--LeetCode shield-->
-            <img class="shield-img" src="https://img.shields.io/badge/LeetCode-LapisBerry-white?style=for-the-badge&logo=LeetCode&logoColor=black&labelColor=%23FFA116">
-        </a>
-    </div>
+      <section class="section" id="skills">
+        <header class="section-head">
+          <span class="section-num">// 02</span>
+          <h2>skills.json</h2>
+          <span class="section-rule"></span>
+        </header>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3><span class="mono key">"languages":</span></h3>
+            <ul class="chip-list">
+              <li class="chip"><span class="chip-dot lang-py"></span>Python</li>
+              <li class="chip"><span class="chip-dot lang-js"></span>JavaScript</li>
+              <li class="chip"><span class="chip-dot lang-ts"></span>TypeScript</li>
+              <li class="chip"><span class="chip-dot lang-java"></span>Java</li>
+              <li class="chip"><span class="chip-dot lang-c"></span>C</li>
+              <li class="chip"><span class="chip-dot lang-cpp"></span>C++</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3><span class="mono key">"web":</span></h3>
+            <ul class="chip-list">
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">Node.js</li>
+              <li class="chip">Express</li>
+              <li class="chip">REST APIs</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3><span class="mono key">"tools":</span></h3>
+            <ul class="chip-list">
+              <li class="chip">Git</li>
+              <li class="chip">GitHub</li>
+              <li class="chip">VS Code</li>
+              <li class="chip">Linux</li>
+              <li class="chip">Figma</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3><span class="mono key">"interests":</span></h3>
+            <ul class="chip-list">
+              <li class="chip">Machine Learning</li>
+              <li class="chip">Artificial Intelligence</li>
+              <li class="chip">Data Science</li>
+              <li class="chip">Mathematics</li>
+              <li class="chip">Algorithms</li>
+              <li class="chip">Generative Art</li>
+              <li class="chip">Problem Solving</li>
+              <li class="chip">Web Dev</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-    <h1 class="under-development-text">UNDER DEVELOPMENT</h1>
+      <section class="section" id="projects">
+        <header class="section-head">
+          <span class="section-num">// 03</span>
+          <h2>projects/</h2>
+          <span class="section-rule"></span>
+          <a
+            class="section-link mono"
+            href="https://github.com/LapisBerry?tab=repositories"
+            target="_blank"
+            rel="noopener"
+            >ls --all ↗</a
+          >
+        </header>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <header class="project-head">
+              <span class="project-icon mono">JS</span>
+              <h3>Desmos-Art-Generator</h3>
+            </header>
+            <p>
+              A small tool that turns inputs into beautiful Desmos graph
+              equations — generative math art straight in the browser.
+            </p>
+            <ul class="tag-list">
+              <li>JavaScript</li>
+              <li>Generative</li>
+              <li>Math</li>
+            </ul>
+            <a
+              class="project-link mono"
+              href="https://github.com/LapisBerry/Desmos-Art-Generator"
+              target="_blank"
+              rel="noopener"
+              >view repo →</a
+            >
+          </article>
+
+          <article class="project-card">
+            <header class="project-head">
+              <span class="project-icon mono">C</span>
+              <h3>Just-Donut</h3>
+            </header>
+            <p>
+              The classic spinning ASCII doughnut, written in C. A love
+              letter to terminal animations and a little bit of trigonometry.
+            </p>
+            <ul class="tag-list">
+              <li>C</li>
+              <li>ASCII</li>
+              <li>Terminal</li>
+            </ul>
+            <a
+              class="project-link mono"
+              href="https://github.com/LapisBerry/Just-Donut"
+              target="_blank"
+              rel="noopener"
+              >view repo →</a
+            >
+          </article>
+
+          <article class="project-card">
+            <header class="project-head">
+              <span class="project-icon mono">JS</span>
+              <h3>i2cedt — Group 46</h3>
+            </header>
+            <p>
+              Final project web application built with my CEDT classmates.
+              Full-stack feature work, end-to-end, on a tight deadline.
+            </p>
+            <ul class="tag-list">
+              <li>JavaScript</li>
+              <li>Web App</li>
+              <li>Team</li>
+            </ul>
+            <a
+              class="project-link mono"
+              href="https://github.com/LapisBerry/i2cedt-Final-Project-Web-Application-Group-46"
+              target="_blank"
+              rel="noopener"
+              >view repo →</a
+            >
+          </article>
+
+          <article class="project-card">
+            <header class="project-head">
+              <span class="project-icon mono">PY</span>
+              <h3>Google foobar</h3>
+            </header>
+            <p>
+              My solutions to Google's hidden foobar challenges. Algorithmic
+              puzzles, Python, and the occasional off-by-one bug.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Algorithms</li>
+              <li>Puzzles</li>
+            </ul>
+            <a
+              class="project-link mono"
+              href="https://github.com/LapisBerry/My-Google-foobar-problems"
+              target="_blank"
+              rel="noopener"
+              >view repo →</a
+            >
+          </article>
+
+          <article class="project-card">
+            <header class="project-head">
+              <span class="project-icon mono">MD</span>
+              <h3>LapisBerry (Profile)</h3>
+            </header>
+            <p>
+              My GitHub profile README — a tiny self-introduction that lives
+              at the top of github.com/LapisBerry.
+            </p>
+            <ul class="tag-list">
+              <li>Markdown</li>
+              <li>Profile</li>
+            </ul>
+            <a
+              class="project-link mono"
+              href="https://github.com/LapisBerry/LapisBerry"
+              target="_blank"
+              rel="noopener"
+              >view repo →</a
+            >
+          </article>
+
+          <article class="project-card">
+            <header class="project-head">
+              <span class="project-icon mono">HTML</span>
+              <h3>LapisBerry.github.io</h3>
+            </header>
+            <p>
+              The site you're looking at — handwritten HTML, CSS, and a
+              sprinkle of JavaScript. Hosted with GitHub Pages.
+            </p>
+            <ul class="tag-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+            </ul>
+            <a
+              class="project-link mono"
+              href="https://github.com/LapisBerry/LapisBerry.github.io"
+              target="_blank"
+              rel="noopener"
+              >view repo →</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <header class="section-head">
+          <span class="section-num">// 04</span>
+          <h2>education</h2>
+          <span class="section-rule"></span>
+        </header>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-when mono">present</div>
+              <h3>B.Eng. in Computer Engineering</h3>
+              <p class="timeline-where">
+                Chulalongkorn University · Bangkok, Thailand
+              </p>
+              <p>
+                Member of <strong>CEDT batch 01</strong> — the first cohort
+                of Chula's Computer Engineering &amp; Digital Technology
+                program. Coursework spans algorithms, systems, web, and
+                data, with hands-on group projects each semester.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-when mono">always</div>
+              <h3>Self-taught side quests</h3>
+              <p class="timeline-where">github.com/LapisBerry · LeetCode · Kaggle</p>
+              <p>
+                Picking up new languages, grinding LeetCode problems,
+                exploring Kaggle datasets, and building tiny tools just to
+                see if they work.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" id="contact">
+        <header class="section-head">
+          <span class="section-num">// 05</span>
+          <h2>contact</h2>
+          <span class="section-rule"></span>
+        </header>
+        <div class="contact-card">
+          <p class="contact-lead">
+            <span class="mono accent">$</span> echo "Got an idea, a project,
+            or just want to chat? I'd love to hear from you."
+          </p>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:kittiphopkhankaew@gmail.com">
+                <span class="contact-key mono">email</span>
+                <span class="contact-val">kittiphopkhankaew@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/LapisBerry"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-key mono">github</span>
+                <span class="contact-val">@LapisBerry</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kittiphop-khankaew/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-key mono">linkedin</span>
+                <span class="contact-val">kittiphop-khankaew</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://discordapp.com/users/1110214078808461393"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-key mono">discord</span>
+                <span class="contact-val">blueoflapislazuli</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/LapiXLazuliX"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-key mono">x</span>
+                <span class="contact-val">@LapiXLazuliX</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/mighty_ikkyu/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-key mono">instagram</span>
+                <span class="contact-val">@mighty_ikkyu</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/kittiphop.khankaew.9/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-key mono">facebook</span>
+                <span class="contact-val">Kittiphop Khankaew</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.kaggle.com/kittiphopkhankaew"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-key mono">kaggle</span>
+                <span class="contact-val">kittiphopkhankaew</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://leetcode.com/LapisBerry/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact-key mono">leetcode</span>
+                <span class="contact-val">LapisBerry</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="mono footer-line">
+          <span class="t-prompt">$</span> echo "built with html · css · js
+          · ❤"
+        </p>
+        <p class="mono footer-meta">
+          © <span id="year"></span> Kittiphop Khankaew ·
+          <a
+            href="https://github.com/LapisBerry/LapisBerry.github.io"
+            target="_blank"
+            rel="noopener"
+            >source</a
+          >
+        </p>
+      </div>
+    </footer>
 
     <script src="scripts/main.js"></script>
-</body>
+  </body>
 </html>
