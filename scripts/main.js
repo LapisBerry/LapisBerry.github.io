@@ -46,12 +46,12 @@
     console.log &&
     !navigator.webdriver
   ) {
-    const style = 'color:#5ccfe6;font-family:monospace;font-size:12px';
+    const style = 'color:#5865f2;font-family:monospace;font-size:12px';
     console.log('%c$ whoami', style);
     console.log('%c> Kittiphop "Ikkyu" Khankaew (LapisBerry)', style);
     console.log(
       '%c> say hi: kittiphopkhankaew@gmail.com',
-      'color:#f15bb5;font-family:monospace;font-size:12px'
+      'color:#35ed7e;font-family:monospace;font-size:12px'
     );
   }
 })();
